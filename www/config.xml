@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id= "ma.carre.immopoly"
+    versionCode="0.1"
+    version   = "0.1">
+  <name>Immopoly</name>
+  <description>
+        Immopoly app.
+    </description>
+  <author email="hello@carre.co.ma" href="http://carre.co.ma/">
+      Carre Web Agency
+    </author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <access origin="*.pushbots.com" />
+
+    <preference name='phonegap-version' value='cli-5.1.1' />
+    <preference name="orientation" value="portrait" />
+    <preference name="fullscreen" value="false" />
+    <preference name="target-device" value="handset" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="true" />
+    <preference name="ios-statusbarstyle" value="default" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="EnableViewportScale" value="true" />
+    <preference name="MediaPlaybackRequiresUserAction" value="false" />
+    <preference name="AllowInlineMediaPlayback" value="false" />
+    <preference name="BackupWebStorage" value="cloud" />
+    <preference name="TopActivityIndicator" value="gray" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+    <preference name="HideKeyboardFormAccessoryBar" value="false" />
+    <preference name="SuppressesIncrementalRendering" value="false" />
+    <preference name="android-minSdkVersion" value="7" />
+    <preference name="android-installLocation" value="internalOnly" />
+    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="ErrorUrl" value=""/>
+    <preference name="BackgroundColor" value="0xffffff"/>
+    <preference name="KeepRunning" value="true"/>
+    <preference name="DisallowOverscroll" value="false"/>
+    <preference name="LoadingDialog" value=","/> 
+    <preference name="LoadUrlTimeoutValue" value="20000" />
+    <preference name="disable-cursor" value="false" />
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+    <gap:platform name="winphone" />
+
+    <!-- Define app icon for each platform. -->
+    <icon src="icon.png" gap:role="default"/>
+    <icon src="img/icons/android-36.png"   gap:platform="android"   gap:density="ldpi" />
+    <icon src="img/icons/android-48.png"   gap:platform="android"   gap:density="mdpi" />
+    <icon src="img/icons/android-72.png"   gap:platform="android"   gap:density="hdpi" />
+    <icon src="img/icons/android-96.png"   gap:platform="android"   gap:density="xhdpi" />
+    <icon src="img/icons/android-144.png"   gap:platform="android"   gap:density="xxhdpi" />
+    <icon src="img/icons/android-192.png"   gap:platform="android"   gap:density="xxxhdpi" />
+ 
+
+    <icon src="img/icons/icon-57.png"      gap:platform="ios"  width="57" height="57" />
+    <icon src="img/icons/icon-60.png"      gap:platform="ios" width="60" height="60" />
+    <icon src="img/icons/icon-72.png"      gap:platform="ios"  width="72" height="72" />
+    <icon src="img/icons/icon-57-2x.png"   gap:platform="ios"  width="114" height="114" />
+    <icon src="img/icons/icon-60@2x.png"   gap:platform="ios" width="120" height="120" />
+    <icon src="img/icons/icon-72-2x.png"   gap:platform="ios"  width="144" height="144" />
+   
+
+    <!-- Define app splash screen for each platform. -->
+    <gap:splash src="img/splash/s-ldp.png"  gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="img/splash/s-mdp.png"  gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="img/splash/s-hdp.png"  gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="img/splash/s-xhdp.png" gap:platform="android" gap:density="xhdpi" />
+       
+    <!-- iPhone and iPod touch -->
+    <gap:splash src="img/splash/Default.png" gap:platform="ios" width="320" height="480" />
+    <gap:splash src="img/splash/Default@2x.png" gap:platform="ios" width="640" height="960" />
+
+    <!-- iPhone 5 / iPod Touch (5th Generation) -->
+    <gap:splash src="img/splash/Default-568h@2x.png" gap:platform="ios" width="640" height="1136" />
+
+    <!-- iPhone 6 -->
+    <gap:splash src="img/splash/Default-667h@2x.png" gap:platform="ios" width="750" height="1334" />
+    <gap:splash src="img/splash/Default-Portrait-736h@3x.png" gap:platform="ios" width="1242" height="2208" />
+
+
+    <!-- Plugins -->
+
+
+    <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.9.0">
+        <param name="APP_ID" value="1619280068338977" />
+        <param name="APP_NAME" value="Immopoly" />
+    </gap:plugin>
+
+    <gap:plugin name="com.pushbots.push" version="1.2.3" source="plugins.cordova.io" />
+    <gap:plugin name="br.com.paveisitemas.splashscreen" version="2.1.1" />
+
+
+    <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+    <param name="onload" value="true"/>
+  </feature>
+</widget>

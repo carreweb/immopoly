@@ -1,0 +1,124 @@
+<ion-view view-title="" hide-back-button="" drag-back>
+
+  <ion-content class="bg-grey2 detail-page" ng-controller="DetailCtrl">
+  
+
+
+     <div class="slider-detail">
+      <div class="carousel-detail">
+       <ion-slide-box  does-continue="true" slide-interval="5000" auto-play="true">
+          <ion-slide ng-repeat="ann in annonce.list_photos" class="img-slide" style="background:url('{{ann.photo}}') center center no-repeat;background-size:cover;">
+          
+          </ion-slide>
+        </ion-slide-box>
+        <div class="row nb-images">
+              <p class=""><i ><img src="img/perimetre.png" alt=""></i> 45Km </p>
+        </div>
+      </div>
+        <div class="row info-house-card bb-bottom">
+            
+            <div class="col col-75">
+              <p class="name-house">{{annonce.titre}}</p>
+              <p class="adresse-house">
+                <i class="ion-ios-location-outline"></i> {{annonce.emplacement}}
+              </p>
+              <p class="price-house">€ {{annonce.prix}}</p>
+            </div>
+            <div class="col logo-owner"><img src="{{annonce.logo}}" alt=""></div>
+          </div>
+
+          <div class="row text-desc-projet " ng-class="{'show-more':showMore}"><!-- show-more -->
+            <p class="col">{{annonce.description}}</p>
+          </div>
+          <div class="more-text" ng-click="showMore =! showMore">
+            <p class="text-center read-more-projet">
+              <span class="ion-more"></span>
+            </p>
+          </div>
+     </div>
+
+     <div class="info-detail">
+       <div class="row">
+         <div class="col-75 text-center icons-detail">
+           <div class="row">
+             <div class="col">
+               <p>
+                 <em>{{annonce.chambres}}</em><br>
+                 <span class="ico-bed"><img src="img/bed.png" alt=""></span><br>
+                 CHAMBRES
+               </p>
+             </div>
+             <div class="col">
+               <p>
+                 <em>{{annonce.douches}}</em><br>
+                 <span class="ico-bed"><img src="img/shower.png" alt=""></span><br>
+                 DOUCHES
+               </p>
+             </div>
+             <div class="col">
+               <p>
+                 <em>{{annonce.superficie}}</em><br>
+                <span class="ico-bed"><img src="img/square.png" alt=""></span><br>
+                 M2
+               </p>
+             </div>
+           </div>
+         </div>
+
+       </div>
+
+
+      <div class=" yes" ng-click="chatter(annonce)">
+        <span>
+          <i class="ion-thumbsup"></i>
+        </span>
+      </div>
+      <div class=" no">
+        <span>
+        <i class="ion-ios-close-empty"></i>
+        </span>
+      </div>
+      
+      <div class=" favorit">
+        <span ng-click="addtoFavorit(annonce)">
+          <i class="ion-ios-star-outline" ng-class="{'ion-ios-star-outline':!annonce.favoris,'ion-ios-star':annonce.favoris}"></i>
+        </span>
+      </div>
+
+
+     </div>
+
+
+  
+
+
+
+
+
+
+
+  </ion-content>
+</ion-view>
+
+
+
+
+<ion-tabs class="tabs-icon-top  nav-bot">
+
+        <ion-tab title="ANNONCES" icon="ion-plus" href="#/app/annonce">
+        </ion-tab>
+
+        <ion-tab title="NOUVELLE RECHERCHE" icon="ion-ios-search-strong" class="search-btn" href="#/app/search">
+        </ion-tab>
+
+        <ion-tab title="FAVORIS" icon="ion-ios-star-outline " href="#/app/favoris">
+        </ion-tab>
+        <span class="badge nbre-favorit badge-noti-fav" >5</span>
+
+</ion-tabs>
+
+
+
+
+
+

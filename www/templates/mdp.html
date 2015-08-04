@@ -1,0 +1,26 @@
+<ion-view view-title="" hide-nav-bar="true">
+
+  <ion-content class="bg-grey">
+  <div class="text-center logo-login">
+    <img src="img/logo.png" alt="">
+    
+  </div>
+  <div class="form">
+      <form name="formMdp">
+      <div class="list ">
+        <label class="item item-input">
+          <input type="email" ng-model="mdp.email" required placeholder="Email">
+        </label>
+       
+        <label class="">
+          <button class="button button-block button-connect button-balanced" ng-disabled="formMdp.$invalid" ng-click="givemeMdp()">envoyer</button>
+        </label>
+      </div>
+    </form>
+    <div class="new-compte text-center">
+      <p>Êtes-vous membre ?<a href="#/app/login"><b> Connecte-toi maintenant</b></a></p>
+      
+    </div>
+  </div>
+  </ion-content>
+</ion-view>

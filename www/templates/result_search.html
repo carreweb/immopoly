@@ -1,0 +1,101 @@
+<ion-view view-title="" hide-back-button="true">
+
+ <ion-content class="bg-grey pane-card" scroll="false">
+  
+
+<!-- tinder card -->
+<div ng-controller="resultCtrl" class="">
+
+      
+<div class="card-swipe">
+
+      <td-cards ng-click="cardSwipedRight($index)">
+        <td-card ng-repeat="card in cards" ng-click="cardSwipedRight($index)" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}">
+           <a href="#/app/detail/{{card.id}}" class="text-d-n">
+          <div class="image" ng-controller="CardCtrl">
+          
+            <div class="no-text overlayBox">
+              <div class="noBox boxed">Trash</div>
+            </div>
+            <div class="yes-text overlayBox">
+              <div class="yesBox boxed" id="centerMe">Save</div>
+            </div>
+
+            <div class="img-card" style="background:url('{{card.image}}') center center no-repeat;background-size:cover;">
+               <div class="row nb-images">
+              <p class=""><i ><img src="img/perimetre.png" alt=""></i> 45Km <span class="pull-right">{{card.nombre_photo}} <i class="ion-ios-camera-outline"></i></span></p>
+
+            </div>
+            </div>
+            <!-- <img ng-src="{{card.image}}"> -->
+            <div class="row info-house-card">
+              <div class="col col-75">
+                <p class="name-house">{{card.titre}}</p>
+                <p class="adresse-house">
+                  <i class="ion-ios-location-outline"> {{card.emplacement}}</i>
+                </p>
+                <p class="price-house">€ {{card.prix}}</p>
+              </div>
+              <div class="col logo-owner"><img src="{{card.logo}}" alt=""></div>
+            </div>
+          </div>
+          </a>
+        </td-card>
+      </td-cards>
+
+
+    <div id="control" class="text-center">
+      <div class=" no" ng-click="gotoNext(elementindex)">
+        <span>
+        <i class="ion-ios-close-empty"></i>
+        </span>
+      </div>
+      <div class=" yes" ng-click="chatter(elementselected)">
+        <span>
+          <i class="ion-thumbsup"></i>
+        </span>
+      </div>
+      <div class=" favorit">
+        <span ng-click="addtoFavorit(elementselected)">
+          <i class="ion-ios-star-outline" ng-class="{'ion-ios-star-outline':!elementselected.favoris,'ion-ios-star':elementselected.favoris}"></i>
+        </span>
+      </div>
+    
+  </div>
+  </div>
+    </div>
+  
+
+<!-- end tinder card -->
+
+
+
+
+
+
+
+  </ion-content>
+</ion-view>
+
+
+
+
+<ion-tabs class="tabs-icon-top  nav-bot">
+
+        <ion-tab title="ANNONCES" icon="ion-plus" href="#/app/annonce">
+        </ion-tab>
+
+        <ion-tab title="NOUVELLE RECHERCHE" icon="ion-ios-search-strong" class="search-btn" href="#/app/search">
+        </ion-tab>
+
+        <ion-tab title="FAVORIS" icon="ion-ios-star-outline" href="#/app/favoris">
+        </ion-tab>
+        <span class="badge nbre-favorit badge-noti-fav" >{{nombre_favoris}}</span>
+
+</ion-tabs>
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+<ion-view view-title="" hide-nav-bar="true">
+
+  <ion-content class="" scroll="false">
+  <div class="text-center logo-login border-b">
+    <img src="img/logo.png" alt="">
+    <h1 class="title-compte">Créer un compte</h1>
+    <div class="link-cancel text-center">
+
+      <p><a href="#/app/login"><b>Annuler</b></a></p>
+    </div>
+  </div>
+  <div class="form forminscription">
+    <form name="formInscription">
+      <div class="list ">
+        <div class="row pad-0">
+           <label class="item col mg-r item-input">
+          <input type="text" ng-model="inscription.nom" required placeholder="Nom">
+          </label>
+          
+          <label class="item col item-input">
+            <input type="text" ng-model="inscription.prenom" required placeholder="Prénom">
+          </label>
+        </div>
+       
+        <label class="item item-input">
+            <input type="email" ng-model="inscription.email" required placeholder="Email">
+          </label>
+        <label class="item item-input">
+          <input type="password" ng-model="inscription.password" required placeholder="Mot de passe">
+        </label>
+         <label class="item item-input field-tel">
+          <span>+34</span>
+          <input type="phone" ng-model="inscription.telephone" required placeholder="">
+        </label>
+
+        <label class="">
+          <button class="button button-block button-connect button-balanced" ng-disabled="formInscription.$invalid" ng-click="gotoinscription()">Créer mon compte</button>
+        </label>
+
+        <div class="link-condition text-center">
+
+          <p>En créant un compte, vous acceptez<br>
+          <a href="#">les termes et conditions générales d’utilisation</a></p>
+        </div>
+
+       
+      </div>
+    </form>
+    
+  </div>
+  </ion-content>
+</ion-view>
+
+ 

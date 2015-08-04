@@ -1,0 +1,65 @@
+<ion-view view-title="" hide-back-button="false" ng-controller="detailChat">
+
+  <ion-content class="chat" >
+      <div class="list grey">
+         <a class="item item-avatar item-chat" href="#">
+            <img src="{{annonce.annonce_img}}">
+            <span class="badge badge-assertive badge-new-msg" > </span>
+            <h2>{{annonce.titre}}</h2>
+            <p class="location-chat"><i class="ion-ios-location"></i>{{annonce.emplacement}}</p>
+            <p class="prix-chat">€ {{annonce.prix}}</p>
+            <!-- <span class="ion-more "></span> -->
+          </a>
+
+          <a class="item  chat-subject row" >
+            <div class="col col-33">
+               <img src="{{annonce.logo}}" >
+            </div>
+            <span class="col">{{annonce.nom_user}}<br>
+                Agence {{annonce.name_agence}}</span>
+            
+          </a>
+      </div> 
+      <div ng-repeat="msg in messagerie" class="pos-r">
+                      
+          <img src="{{msg.avatar}}" class="profile-pic" ng-class="{left:msg.block,right:!msg.block}" />
+
+            <div class="chat-bubble" ng-class="{left:msg.block,right:!msg.block}">
+
+                <div class="message" >
+                    {{msg.text}}
+                </div>
+
+            </div>
+            <div class="message-detail">
+                  
+                  <span >{{msg.date*1000 |  date:'dd/MM/yyyy'}} à {{msg.date*1000 |  date:'HH:mm' }}  </span>
+            </div>
+        </div>
+
+
+
+
+
+
+  </ion-content>
+   <ion-footer-bar keyboard-attach class="bar-stable item-input-inset footer-chat">
+      <label class="item-input-wrapper message-field">
+        <input type="text" ng-model="send.message" placeholder="Votre message ... "  />
+      </label>
+      <button class="button button-clear ion-android-send btn-send-message" ng-click="faitunereponse()" ng-disabled="!send.message">
+        
+      </button>
+    </ion-footer-bar>
+</ion-view>
+
+
+
+
+
+
+
+
+
+
+

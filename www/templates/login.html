@@ -1,0 +1,39 @@
+<ion-view view-title="" hide-nav-bar="true" ng-controller="loginCtrl">
+
+  <ion-content class="bg-grey" scroll="false">
+  <div class="text-center logo-login">
+    <img src="img/logo.png" alt="">
+    
+  </div>
+  <div class="form forminscription">
+    <form name="formlogin">
+      <div class="list ">
+        <label class="item item-input">
+          <input type="email" ng-model="loginData.email" placeholder="Email" required>
+        </label>
+        <label class="item item-input">
+          <input type="password" ng-model="loginData.password" placeholder="Mot de passe" required>
+        </label>
+        <label class="mdp-for text-right" ng-click="gotomdp()">
+            <a href="#/app/mdp" >Mot de passe oublié?</a>
+        </label>
+        <label class="">
+          <button class="button button-block button-connect button-balanced " ng-disabled="formlogin.$invalid" ng-click="doLogin()">se connecter</button>
+        </label>
+        
+        <label class="con-fb text-center">
+            <span>se connecter avec un compte facebook</span>
+        </label>
+
+          
+         <label class="">
+          <button class="button button-block button-facebook " ng-click="loginwithfacebook()"><i class="ion-social-facebook pull-left"></i> facebook</button>
+        </label>
+      </div>
+    </form>
+    <div class="new-compte text-center">
+      <p>Nouveau? <a href="#/app/inscription"><b>Créer un compte gratuit!</b></a></p>
+    </div>
+  </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,46 @@
+<ion-view view-title="" hide-back-button="true">
+
+  <ion-content class="bg-grey2  " ng-controller="listChat">
+      <div class="list">
+
+          <a ng-repeat="conver in conversations" class="item item-avatar item-chat" href="#/app/chat/{{conver.id_conver}}">
+            <img src="{{conver.annonce_img}}">
+            <span class="badge badge-assertive badge-new-msg" ng-if="!conver.status"> </span>
+            <h2>{{conver.titre}}</h2>
+            <p class="location-chat"><i class="ion-ios-location"></i>{{conver.emplacement}}</p>
+            <p class="prix-chat">€ {{conver.prix}}</p>
+            <span class="ion-more "></span>
+          </a>
+
+
+
+
+          
+      </div>
+
+
+  </ion-content>
+</ion-view>
+
+
+
+
+<ion-tabs class="tabs-icon-top  nav-bot">
+
+        <ion-tab title="ANNONCES" icon="ion-plus" href="#/app/annonce">
+        </ion-tab>
+
+        <ion-tab title="NOUVELLE RECHERCHE" icon="ion-ios-search-strong" class="search-btn" href="#/app/search">
+        </ion-tab>
+
+        <ion-tab title="FAVORIS" icon="ion-ios-star-outline" href="#/app/favoris">
+        </ion-tab>
+        <span class="badge nbre-favorit badge-noti-fav" >{{nombre_favoris}}</span>
+
+</ion-tabs>
+
+
+
+
+
+
